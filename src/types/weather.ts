@@ -1,4 +1,3 @@
-// Framgångssvar
 export interface WeatherSuccess {
     cod: number;
     name: string;

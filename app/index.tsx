@@ -20,7 +20,10 @@ export default function HomeScreen() {
         }
 
         let location = await Location.getCurrentPositionAsync({});
-        const data = await fetchWeatherByCoords(location.coords.latitude, location.coords.longitude);
+        const data = await fetchWeatherByCoords(
+          location.coords.latitude,
+          location.coords.longitude
+        );
         setWeather(data);
       } catch (err: any) {
         alert(err.message);

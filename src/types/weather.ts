@@ -1,4 +1,6 @@
+// Framgångssvar
 export interface WeatherSuccess {
+    cod: number;
     name: string;
     main: {
         temp: number;
@@ -17,7 +19,7 @@ export interface WeatherSuccess {
 }
 
 export interface WeatherError {
-    cod: string;
+    cod: string | number;
     message: string;
 }
 

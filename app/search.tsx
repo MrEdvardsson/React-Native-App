@@ -8,6 +8,11 @@ export default function SearchScreen() {
   const [weather, setWeather] = useState<WeatherSuccess | null>(null);
 
   const handleSearch = async () => {
+    if (!city.trim()) {
+      alert("Ange en stad");
+      return;
+    }
+
     try {
       const data = await fetchWeatherByCity(city);
       setWeather(data);
@@ -28,7 +33,8 @@ export default function SearchScreen() {
       <Button title="Sök" onPress={handleSearch} />
       {weather && (
         <Text style={styles.result}>
-          {weather.name}: {Math.round(weather.main.temp)}°C
+          {weather.name}: {Math.round(weather.main.temp)}°C,{" "}
+          {weather.weather[0].description}
         </Text>
       )}
     </View>
@@ -37,6 +43,13 @@ export default function SearchScreen() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, justifyContent: "center", alignItems: "center" },
-  input: { borderWidth: 1, padding: 10, width: "80%", marginBottom: 20 },
+  input: {
+    borderWidth: 1,
+    borderColor: "#ccc",
+    padding: 10,
+    width: "80%",
+    marginBottom: 20,
+    borderRadius: 8,
+  },
   result: { marginTop: 20, fontSize: 20 },
 });

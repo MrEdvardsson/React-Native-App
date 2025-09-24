@@ -1,14 +1,12 @@
 import { useEffect, useState } from "react";
-import { View, Text, StyleSheet, ActivityIndicator, Button } from "react-native";
+import { View, Text, StyleSheet, ActivityIndicator } from "react-native";
 import * as Location from "expo-location";
-import { useRouter } from "expo-router";
 import { fetchWeatherByCoords } from "../src/services/weatherApi";
 import { WeatherSuccess } from "../src/types/weather";
 
 export default function HomeScreen() {
   const [weather, setWeather] = useState<WeatherSuccess | null>(null);
   const [loading, setLoading] = useState(true);
-  const router = useRouter();
 
   useEffect(() => {
     (async () => {
@@ -41,8 +39,11 @@ export default function HomeScreen() {
     <View style={styles.container}>
       {weather ? (
         <>
+          <Text style={styles.city}>
+            {weather.name}, {weather.sys.country}
+          </Text>
           <Text style={styles.temp}>{Math.round(weather.main.temp)}°C</Text>
-          <Text>{weather.weather[0].description}</Text>
+          <Text style={styles.description}>{weather.weather[0].description}</Text>
         </>
       ) : (
         <Text>Ingen väderdata</Text>
@@ -53,5 +54,8 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, justifyContent: "center", alignItems: "center" },
+  city: { fontSize: 28, fontWeight: "600", marginBottom: 10 },
   temp: { fontSize: 48, fontWeight: "bold" },
+  description: { fontSize: 20, textTransform: "capitalize" },
+
 });

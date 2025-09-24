@@ -47,7 +47,6 @@ export default function HomeScreen() {
       ) : (
         <Text>Ingen väderdata</Text>
       )}
-      <Button title="Sök stad" onPress={() => router.push("/search")} />
     </View>
   );
 }

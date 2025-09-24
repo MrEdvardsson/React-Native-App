@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { View, TextInput, Button, Text, StyleSheet } from "react-native";
-import { fetchWeatherByCity } from "../src/services/weatherApi";
-import { WeatherSuccess } from "../src/types/weather";
+import { router } from "expo-router";
+import { View, TextInput, Button, Text, StyleSheet, TouchableOpacity, Keyboard } from "react-native";
+import { fetchWeatherByCity } from "../../src/services/weatherApi";
+import { WeatherSuccess } from "../../src/types/weather";
 
 export default function SearchScreen() {
   const [city, setCity] = useState("");
@@ -12,6 +13,7 @@ export default function SearchScreen() {
       alert("Ange en stad");
       return;
     }
+    Keyboard.dismiss();
 
     try {
       const data = await fetchWeatherByCity(city);
@@ -32,10 +34,12 @@ export default function SearchScreen() {
       />
       <Button title="Sök" onPress={handleSearch} />
       {weather && (
-        <Text style={styles.result}>
-          {weather.name}: {Math.round(weather.main.temp)}°C,{" "}
-          {weather.weather[0].description}
-        </Text>
+        <TouchableOpacity onPress={() => router.push("/search/weeklySearch")}>
+          <Text style={styles.result}>
+            {weather.name}: {Math.round(weather.main.temp)}°C,{" "}
+            {weather.weather[0].description}
+          </Text>
+        </TouchableOpacity>
       )}
     </View>
   );

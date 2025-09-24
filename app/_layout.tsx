@@ -1,21 +1,20 @@
-import { Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
+import { Tabs } from "expo-router";
 
 export default function Layout() {
   return (
     <Tabs
       screenOptions={{
         headerTitleAlign: "center",
-        tabBarStyle: { height: 60 },
         tabBarLabelStyle: { fontSize: 14 },
       }}
     >
       <Tabs.Screen
         name="index"
         options={{
-          title: "Home",
+          title: "Today",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="home" color={color} size={size} />
+            <Ionicons name="partly-sunny" color={color} size={size} />
           ),
         }}
       />

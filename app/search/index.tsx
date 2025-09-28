@@ -34,7 +34,15 @@ export default function SearchScreen() {
       />
       <Button title="Sök" onPress={handleSearch} />
       {weather && (
-        <TouchableOpacity onPress={() => router.push("/search/weeklySearch")}>
+        <TouchableOpacity onPress={() => router.push({
+          pathname: "/search/weeklySearch",
+          params: {
+            city: weather.name,
+            lat: String(weather.coord.lat),
+            lon: String(weather.coord.lon),
+          },
+        })
+        }>
           <Text style={styles.result}>
             {weather.name}: {Math.round(weather.main.temp)}°C,{" "}
             {weather.weather[0].description}

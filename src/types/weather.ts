@@ -4,6 +4,10 @@ export interface WeatherSuccess {
     sys: {
         country: string;
     };
+    coord: {
+        lon: number;
+        lat: number;
+    };
     main: {
         temp: number;
         feels_like: number;

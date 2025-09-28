@@ -26,3 +26,17 @@ export const fetchWeatherByCity = async (city: string) => {
 
     return data;
 };
+
+export async function fetchForecast5Days(lat: number, lon: number) {
+    const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&lang=sv&appid=${API_KEY}`;
+    const res = await fetch(url);
+    const data = await res.json();
+
+    if (!res.ok) {
+        throw new Error(data.message || "API-fel");
+    }
+
+    return data;
+}
+
+

@@ -54,7 +54,7 @@ export default function SearchScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: "center", alignItems: "center" },
+  container: { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "#E0F2FF" },
   input: {
     borderWidth: 1,
     borderColor: "#ccc",
@@ -62,6 +62,7 @@ const styles = StyleSheet.create({
     width: "80%",
     marginBottom: 20,
     borderRadius: 8,
+    backgroundColor: "#fff",
   },
   result: { marginTop: 20, fontSize: 20 },
 });

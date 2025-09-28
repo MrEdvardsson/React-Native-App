@@ -29,8 +29,6 @@ export default function WeeklySearch() {
         const data = await fetchForecast5Days(Number(lat), Number(lon));
         console.log("Weekly params:", city, lat, lon);
 
-
-        // Gruppar per dag
         const grouped: Record<string, ForecastItem[]> = {};
         data.list.forEach((item: ForecastItem) => {
           const day = item.dt_txt.split(" ")[0];

@@ -7,6 +7,8 @@ export default function Layout() {
       screenOptions={{
         headerTitleAlign: "center",
         tabBarLabelStyle: { fontSize: 14 },
+        headerStyle: { backgroundColor: "#42A5F5" },
+        headerTintColor: "#fff",
       }}
     >
       <Tabs.Screen

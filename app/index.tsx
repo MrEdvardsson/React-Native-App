@@ -53,7 +53,7 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: "center", alignItems: "center" },
+  container: { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "#E0F2FF" },
   city: { fontSize: 28, fontWeight: "600", marginBottom: 10 },
   temp: { fontSize: 48, fontWeight: "bold" },
   description: { fontSize: 20, textTransform: "capitalize" },

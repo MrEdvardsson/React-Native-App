@@ -24,6 +24,9 @@ export default function Layout() {
         name="weekly"
         options={{
           title: "Weekly",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="calendar" color={color} size={size} />
+          ),
         }}
       />
       <Tabs.Screen

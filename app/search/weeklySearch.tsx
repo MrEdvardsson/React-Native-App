@@ -27,7 +27,6 @@ export default function WeeklySearch() {
         if (!lat || !lon) return;
         const data = await fetchForecast16Days(Number(lat), Number(lon));
 
-        // Mappa direkt, varje dag är redan separerad
         const summaries: DailySummary[] = data.list.map((item: ForecastItem) => ({
           date: new Date(item.dt * 1000).toISOString().split("T")[0],
           min: item.temp.min,

@@ -30,3 +30,17 @@ export interface WeatherError {
 }
 
 export type WeatherResponse = WeatherSuccess | WeatherError;
+
+export interface ForecastItem {
+    dt: number;
+    main: {
+        temp: number;
+        temp_min: number;
+        temp_max: number;
+    };
+    weather: {
+        description: string;
+        icon: string;
+    }[];
+    dt_txt: string;
+}

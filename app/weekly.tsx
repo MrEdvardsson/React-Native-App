@@ -7,7 +7,6 @@ import {
   ActivityIndicator,
   TouchableOpacity,
   Modal,
-  Image,
   Alert,
   Pressable,
 } from "react-native";

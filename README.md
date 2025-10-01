@@ -1,22 +1,24 @@
+# Väderapp med React-native
 
 
 
 
+## Lista på komponenter:
 
-### Lista på komponenter:
+### React Native
+1. useState
+2. TouchableOpacity
+3. View
+4. Text
 
-Expo 
-1.
-2.
-3.
-4.
+### Expo 
+1. Tabs
+2. Router
+3. Location
+4. Stack
 
-React Native
-1.
-2.
-3.
-4.
-
+### Extern
+1. lodash
 
 Krav för godkänt
 
@@ -24,7 +26,7 @@ Krav för godkänt
 
 - [x] - Projektet använder minst 4 Expo-komponenter
 
-- [ ] - Utvalda komponenter är listade i README tillsammans med kravlistan
+- [x] - Utvalda komponenter är listade i README tillsammans med kravlistan
 
 - [x]- React Navigation används för att skapa en bättre användarupplevelse
 
@@ -38,10 +40,11 @@ Krav för godkänt
 
 Krav för väl godkänt
 
-- [ ] - Alla punkter för godkänt är uppfyllda
+- [x] - Alla punkter för godkänt är uppfyllda
 
-- [ ] - Ytterligare en extern modul används (exempel: react-hook-form)
+- [x] - Ytterligare en extern modul används (exempel: react-hook-form)
 
 - [x] - Appen hämtar data från ett Web-API
 
+OBS! Plannererar att göra
 - [ ] - Appen är förberedd för lansering till en App Store (deadline samma dag som kursen slutar)

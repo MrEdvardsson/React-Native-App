@@ -5,8 +5,8 @@ För att köra programmet:
 lägg in .env filen i rooten av projektet och säg till att den heter .env och inte env.
 
 kör en npm install för att ladda ner alla dependecies som projektet behöver.
-starta din valda emulator.
-kör 'npm start' för att starta utvecklingsservern 
+starta din valda emulator (Ios eller android).
+kör 'npm start' för att starta programmet och följ menyn 
 
 
 ## Lista på komponenter:

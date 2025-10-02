@@ -44,6 +44,11 @@ export default function HomeScreen() {
           </Text>
           <Text style={styles.temp}>{Math.round(weather.main.temp)}°C</Text>
           <Text style={styles.description}>{weather.weather[0].description}</Text>
+          <Text style={styles.details}>
+            Känns som: {Math.round(weather.main.feels_like)}°C
+            {"\n"}Vind: {weather.wind.speed} m/s
+            {"\n"}Moln: {weather.clouds.all}%
+          </Text>
         </>
       ) : (
         <Text>Ingen väderdata</Text>
@@ -57,5 +62,6 @@ const styles = StyleSheet.create({
   city: { fontSize: 28, fontWeight: "600", marginBottom: 10 },
   temp: { fontSize: 48, fontWeight: "bold" },
   description: { fontSize: 20, textTransform: "capitalize" },
+  details: { fontSize: 12, margin: 10, paddingTop: 10, textAlign: "center" },
 
 });

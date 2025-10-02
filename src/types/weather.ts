@@ -16,6 +16,13 @@ export interface WeatherSuccess {
         pressure: number;
         humidity: number;
     };
+    wind: {
+        speed: number;
+        deg: number;
+    };
+    clouds: {
+        all: number;
+    };
     weather: {
         id: number;
         main: string;

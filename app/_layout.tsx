@@ -30,6 +30,15 @@ export default function Layout() {
         }}
       />
       <Tabs.Screen
+        name="map"
+        options={{
+          title: "Weather Map",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="map" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="search"
         options={{
           title: "Search",

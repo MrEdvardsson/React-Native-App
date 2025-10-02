@@ -47,6 +47,9 @@ export default function SearchScreen() {
             {weather.name}: {Math.round(weather.main.temp)}°C,{" "}
             {weather.weather[0].description}
           </Text>
+          <Text style={styles.chevron}>
+            press to show more
+          </Text>
         </TouchableOpacity>
       )}
     </View>
@@ -64,5 +67,6 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     backgroundColor: "#fff",
   },
+  chevron: { fontSize: 14, color: "#999", textAlign: "center" },
   result: { marginTop: 20, fontSize: 20 },
 });

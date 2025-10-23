@@ -1,4 +1,5 @@
 # Väderapp med React-native
+
 Det här är en väderapp som är byggt med react-native med frameworket Expo.
 
 För att köra programmet:
@@ -6,27 +7,27 @@ lägg in .env filen i rooten av projektet och säg till att den heter .env och i
 
 kör en npm install för att ladda ner alla dependecies som projektet behöver.
 starta din valda emulator (Ios eller android).
-kör 'npm start' för att starta programmet och följ menyn 
-
+kör 'npm start' för att starta programmet och följ menyn
 
 ## Lista på komponenter:
 
 ### React Native
+
 1. useState
 2. TouchableOpacity
 3. View
 4. Text
 
-### Expo 
-1. Tabs
-2. Router
-3. Location
-4. Stack
+### Expo
+
+1. Router
+2. Location
+3. Sensors
+4.
 
 ### Extern
+
 1. lodash
-
-
 
 Krav för godkänt
 
@@ -55,4 +56,5 @@ Krav för väl godkänt
 - [x] - Appen hämtar data från ett Web-API
 
 OBS! Plannererar att göra
+
 - [ ] - Appen är förberedd för lansering till en App Store (deadline samma dag som kursen slutar)

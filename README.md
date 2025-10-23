@@ -23,7 +23,7 @@ kör 'npm start' för att starta programmet och följ menyn
 1. Router
 2. Location
 3. Sensors
-4.
+4. Device
 
 ### Extern
 
